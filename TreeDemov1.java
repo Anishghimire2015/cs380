@@ -137,7 +137,13 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
+		   if(root == null){
+			   throw new IllegalArgumentException("Tree is empty");
+		   }
+		   while(root.right != null){
+			   root = root.right;
+		   }
+		   return root.value;
 	   }
 	   
 	   
