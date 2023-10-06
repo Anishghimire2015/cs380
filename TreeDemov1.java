@@ -100,7 +100,16 @@ class Node{
 	   with a specific value
 	   */
 	   public boolean find(Node root, int key){
-		 //implement in here
+		   if(root == null){
+			   return false;
+		   }
+		   if(root.value == key){
+			   return true;
+		   }
+		   if(key < root.value){
+			   return find(root.left, key);
+		   }
+		   return find(root.right, key);
 		  
 	   }
 	   
